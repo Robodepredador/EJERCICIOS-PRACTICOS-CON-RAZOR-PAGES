@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Ejercicio 15";
+}
+
+<h1>Planificador de Rutas</h1>
+
+<div class="main-wrapper">
+    <div class="card card-body card-container">
+        <form id="formRuta" novalidate>
+            <div class="mb-3 text-start">
+                <label for="salidaInput" class="form-label">Dirección de Salida</label>
+                <input type="text" id="salidaInput" class="form-control" placeholder="Ej: Av. Larco 123" list="direccionesSugeridas" />
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="llegadaInput" class="form-label">Dirección de Llegada</label>
+                <input type="text" id="llegadaInput" class="form-control" placeholder="Ej: Plaza de Armas" list="direccionesSugeridas" />
+            </div>
+
+            <datalist id="direccionesSugeridas">
+                <option value="Miraflores"></option>
+                <option value="San Isidro"></option>
+                <option value="Cercado de Lima"></option>
+                <option value="Surco"></option>
+                <option value="La Molina"></option>
+            </datalist>
+
+            <button type="button" id="btnPlanificar" class="btn btn-primary w-100">Planificar Ruta</button>
+        </form>
+
+        <div id="resultadoRuta" class="mt-3" aria-live="polite"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/ejercicio15.js" asp-append-version="true"></script>
+}

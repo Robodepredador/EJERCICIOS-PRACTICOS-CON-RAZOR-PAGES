@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebSystemExample</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebSystemExample.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/estiloNavbar.css" asp-append-version="true" />
+    
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="border-right sticky-sidebar" id="sidebar-wrapper">
+            <div class="sidebar-heading">Ejercicios Semana 1</div>
+            <div class="list-group list-group-flush">
+                <a asp-controller="Home" asp-action="Index" class="list-group-item list-group-item-action">INICIO</a>
+
+                <div class="px-3 py-2 text-white-50 small font-weight-bold">LISTA DE TRABAJOS</div>
+
+                <a asp-controller="Home" asp-action="Ejercicio1" class="list-group-item list-group-item-action">Ejercicio 1</a>
+                <a asp-controller="Home" asp-action="Ejercicio2" class="list-group-item list-group-item-action">Ejercicio 2</a>
+                <a asp-controller="Home" asp-action="Ejercicio3" class="list-group-item list-group-item-action">Ejercicio 3</a>
+                <a asp-controller="Home" asp-action="Ejercicio4" class="list-group-item list-group-item-action">Ejercicio 4</a>
+                <a asp-controller="Home" asp-action="Ejercicio5" class="list-group-item list-group-item-action">Ejercicio 5</a>
+                <a asp-controller="Home" asp-action="Ejercicio6" class="list-group-item list-group-item-action">Ejercicio 6</a>
+                <a asp-controller="Home" asp-action="Ejercicio7" class="list-group-item list-group-item-action">Ejercicio 7</a>
+                <a asp-controller="Home" asp-action="Ejercicio8" class="list-group-item list-group-item-action">Ejercicio 8</a>
+                <a asp-controller="Home" asp-action="Ejercicio9" class="list-group-item list-group-item-action">Ejercicio 9</a>
+                <a asp-controller="Home" asp-action="Ejercicio10" class="list-group-item list-group-item-action">Ejercicio 10</a>
+                <a asp-controller="Home" asp-action="Ejercicio11" class="list-group-item list-group-item-action">Ejercicio 11</a>
+                <a asp-controller="Home" asp-action="Ejercicio12" class="list-group-item list-group-item-action">Ejercicio 12</a>
+                <a asp-controller="Home" asp-action="Ejercicio13" class="list-group-item list-group-item-action">Ejercicio 13</a>
+                <a asp-controller="Home" asp-action="Ejercicio14" class="list-group-item list-group-item-action">Ejercicio 14</a>
+                <a asp-controller="Home" asp-action="Ejercicio15" class="list-group-item list-group-item-action">Ejercicio 15</a>
+                <a asp-controller="Home" asp-action="Ejercicio16" class="list-group-item list-group-item-action">Ejercicio 16</a>
+                <a asp-controller="Home" asp-action="Ejercicio17" class="list-group-item list-group-item-action">Ejercicio 17</a>
+                <a asp-controller="Home" asp-action="Ejercicio18" class="list-group-item list-group-item-action">Ejercicio 18</a>
+                <a asp-controller="Home" asp-action="Ejercicio19" class="list-group-item list-group-item-action">Ejercicio 19</a>
+
+
+                <a asp-controller="Home" asp-action="Privacy" class="list-group-item list-group-item-action border-top mt-2">PRIVACITY</a>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4">
+                <div class="container-fluid">
+                    <span class="navbar-brand">@ViewData["Title"]</span>
+                    <div class="ms-auto">
+                        <small class="text-muted">WebSystemExample - 2026</small>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+
+            <footer class="border-top footer text-muted mt-5">
+                <div class="container-fluid">
+                    &copy; 2026 - WebSystemExample - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

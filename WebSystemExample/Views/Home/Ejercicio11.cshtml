@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Ejercicio11";
+}
+
+<h1>Gestor de Asistencia</h1>
+
+<div class="main-wrapper">
+    <div class="card card-body card-container">
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Fecha</label>
+            <input type="date" id="fechaInput" class="form-control" />
+        </div>
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Asistió</label>
+            <select id="asistenciaInput" class="form-select">
+                <option value="" disabled selected>-- Seleccione --</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <button type="button" id="btnRegistrar" class="btn btn-primary w-100">
+            Registrar asistencia
+        </button>
+
+        <hr />
+
+        <h5>Historial</h5>
+        <ul id="listaAsistencia" class="list-group mb-3"></ul>
+
+        <div id="resultadoAsistencia"></div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/ejercicio11.js" asp-append-version="true"></script>
+}

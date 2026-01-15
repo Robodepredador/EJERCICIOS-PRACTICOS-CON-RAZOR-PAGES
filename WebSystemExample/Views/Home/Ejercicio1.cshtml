@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Ejercicio1";
+}
+
+@section Scripts {
+    <script src="~/js/ejercicio1.js" asp-append-version="true"></script>
+}
+
+<div class="main-wrapper">
+    <div class="card-container">
+        <form id="formEjercicio1" novalidate>
+            <h2 class="mb-4">Cálculo de Productos</h2>
+
+            <div class="mb-3 text-start">
+                <label for="nombreInput" class="form-label">Ingrese su nombre</label>
+                <input type="text" class="form-control" id="nombreInput" placeholder="Ej. Carlos">
+            </div>
+
+            <div class="mb-3 text-start">
+                <label class="form-label">Seleccione Producto y Cliente</label>
+                <select class="form-select mb-2" id="opcionesProducto" name="producto">
+                    <option selected disabled>Tipo de producto</option>
+                    <option value="1">Papa</option>
+                    <option value="2">Zanahoria</option>
+                    <option value="3">Tomate</option>
+                </select>
+
+                <select class="form-select" id="clienteSelect" name="cliente">
+                    <option selected disabled>Tipo de cliente</option>
+                    <option value="1">Minorista</option>
+                    <option value="2">Mayorista</option>
+                    <option value="3">VIP</option>
+                </select>
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="precioInput" class="form-label">Precio unitario</label>
+                <input type="number" name="precio" class="form-control" id="precioInput" placeholder="0.00">
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="cantidadInput" class="form-label">Cantidad</label>
+                <input type="number" name="cantidad" class="form-control" id="cantidadInput" placeholder="0">
+            </div>
+
+            <button type="submit" id="btnCalcular" class="btn btn-primary w-100">Calcular</button>
+        </form>
+
+        <div id="resultado" class="mt-4" aria-live="polite"></div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Ejercicio10";
+}
+
+<h1>Calculadora de Promedio Académico</h1>
+
+<div class="main-wrapper">
+    <div class="card card-body card-container">
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Nota</label>
+            <input type="number" id="notaInput" class="form-control" min="0" max="20" placeholder="Ingrese una nota" />
+        </div>
+
+        <button type="button" id="btnAgregar" class="btn btn-secondary w-100 mb-2">
+            Agregar nota
+        </button>
+
+        <ul id="listaNotas" class="list-group mb-3"></ul>
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Nota mínima para aprobar</label>
+            <input type="number" id="minimoInput" class="form-control" min="0" max="20" value="11" />
+        </div>
+
+        <button type="button" id="btnCalcular" class="btn btn-primary w-100">
+            Calcular promedio
+        </button>
+
+        <div id="resultadoPromedio" class="mt-3"></div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/ejercicio10.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Ejercicio 16";
+}
+
+<h1>Evaluación de Desempeño</h1>
+
+<div class="main-wrapper">
+    <div class="card card-body card-container">
+        <form id="formEvaluacion" novalidate>
+            <p class="text-muted small">Califique cada competencia de 0 a 20</p>
+
+            <div class="mb-3 text-start">
+                <label for="puntosEquipo" class="form-label">Trabajo en Equipo</label>
+                <input type="number" id="puntosEquipo" class="form-control" min="0" max="20" placeholder="0-20" />
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="puntosPuntualidad" class="form-label">Puntualidad</label>
+                <input type="number" id="puntosPuntualidad" class="form-control" min="0" max="20" placeholder="0-20" />
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="puntosProductividad" class="form-label">Productividad</label>
+                <input type="number" id="puntosProductividad" class="form-control" min="0" max="20" placeholder="0-20" />
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="puntosComunicacion" class="form-label">Comunicación</label>
+                <input type="number" id="puntosComunicacion" class="form-control" min="0" max="20" placeholder="0-20" />
+            </div>
+
+            <button type="button" id="btnEvaluar" class="btn btn-primary w-100">Calcular Promedio</button>
+        </form>
+
+        <div id="resultadoEvaluacion" class="mt-3" aria-live="polite"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/ejercicio16.js" asp-append-version="true"></script>
+}

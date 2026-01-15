@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Ejercicio5";
+}
+
+<h1>Formulario de Cita Médica</h1>
+
+<div class="main-wrapper">
+    <div class="card card-body card-container">
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Nombre del paciente</label>
+            <input type="text" id="nombreInput" class="form-control" placeholder="Ingrese su nombre" />
+        </div>
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Especialidad</label>
+            <select id="especialidadInput" class="form-select">
+                <option value="" selected disabled>-- Seleccione --</option>
+                <option value="Medicina General">Medicina General</option>
+                <option value="Pediatría">Pediatría</option>
+                <option value="Dermatología">Dermatología</option>
+            </select>
+        </div>
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Fecha de la cita</label>
+            <input type="date" id="fechaInput" class="form-control" />
+        </div>
+
+        <button type="button" id="btnReservar" class="btn btn-primary w-100">
+            Reservar cita
+        </button>
+
+        <div id="resultadoCita" class="mt-3"></div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/ejercicio5.js" asp-append-version="true"></script>
+}
