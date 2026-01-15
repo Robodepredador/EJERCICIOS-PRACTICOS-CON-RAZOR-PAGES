@@ -1,4 +1,4 @@
-# Guía de usuario — WebSystemExample
+# Guía de usuario — Tarea Semana 2
 
 Propósito
 --------
